@@ -1,0 +1,33 @@
+@use "../../../styles/scss/variables" as var;
+
+.header {
+    grid-area: header;
+
+    background-image:
+        url("/images/layout/header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__group {
+        width: 100%;
+        padding: 0.5vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5vw;
+
+
+        &__title {
+            color: var.$colorFontLight;
+            font-size: 4rem;
+            font-family: "Indie Flower";
+
+            &--color {
+                color: var.$colorBackgroundDark;
+                -webkit-text-stroke: 0.30rem var.$colorFontLight;
+            }
+        }
+    }
+}

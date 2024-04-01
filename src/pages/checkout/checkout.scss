@@ -1,0 +1,30 @@
+@use "../../styles/scss/variables" as var;
+
+.checkout {
+    h1{
+        text-align: left;
+        display: inline;    
+    }
+
+    &__actions{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+        button{
+            margin: 0 0.2rem;
+        }
+    }
+    &__total{
+        margin-top: 2rem;
+        text-align: right;
+        font-size: var.$fontSizeLG;
+        font-weight: bold;
+        background-color: transparent;
+        border: none;
+    }
+    label{
+        display: block;
+        font-size: larger;
+    }
+}

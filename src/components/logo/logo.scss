@@ -1,0 +1,43 @@
+.logo {
+    img {
+        width: 50%;
+        display: block;
+        margin: auto;
+        align-items: center;
+
+        &.spin {
+            animation: blink 4s linear infinite;
+        }
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(180deg);
+        }
+    }
+
+    @keyframes blink {
+        from {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0.4;
+        }
+
+        to {
+            opacity: 1;
+        }
+
+    }
+
+    @media (max-width: 650px) {
+        img {
+            width: 90%;
+        }
+    }
+}

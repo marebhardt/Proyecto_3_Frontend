@@ -1,0 +1,72 @@
+@use "../../styles/scss/variables" as var;
+
+.cart {
+    h1{
+        text-align: left;
+        display: inline;    
+    }
+
+    &__actions{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+        button{
+            margin: 0 0.2rem;
+        }
+    }
+    
+    &__table__items{
+        .button{
+            margin: 0 0.2rem;
+            width: 30px;
+            min-width: 0.8rem;
+        }
+        thead{
+            th{
+                padding: 1rem;
+                text-align: center;
+                font-weight: bold;
+                border-bottom: 1px solid var.$colorFontLight;
+            }
+        }
+        tfoot{
+            td{
+                padding: 1rem;
+                font-size: var.$fontSizeSM;
+                text-align: center;
+                font-weight: bold;
+                border-top: 1px solid var.$colorFontLight;
+            }
+        }
+        .price{
+            text-align: right;
+        }
+        .number {
+            text-align: center;
+        }
+    }
+    @media (max-width: 650px) {
+        &{
+            overflow-x: auto;
+        }
+        &__table__items{
+            font-size: var.$fontSizeXS;
+             tbody{
+                td:nth-child(2){
+                    display: none;
+                }
+            }
+            thead{
+                th:nth-child(2){
+                    display: none;
+                }
+            }
+            tfoot{
+                td:nth-child(1){
+                    display: none;
+                }
+            }
+        }
+    }
+}
