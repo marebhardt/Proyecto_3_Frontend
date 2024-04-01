@@ -49,10 +49,10 @@ const Contact = () => {
 
     const formik = useFormik({
         initialValues: {
-            fullname: "Test User",
-            phone: "02644241020",
-            email: "juanmateom@gmail.com",
-            query: "bla bla bla bla bla",
+            fullname: "",
+            phone: "",
+            email: "",
+            query: "",
         },
         validationSchema: validationSchema,
         onSubmit: (values, { resetForm }) => {
